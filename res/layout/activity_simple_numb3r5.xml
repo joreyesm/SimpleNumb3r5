@@ -46,7 +46,7 @@
                 android:src="@drawable/first" />
 
             <ImageButton
-                android:id="@+id/btnprevious"
+                android:id="@+id/btngrade"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

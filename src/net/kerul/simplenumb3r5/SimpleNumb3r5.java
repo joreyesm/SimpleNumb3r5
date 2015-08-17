@@ -10,10 +10,13 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class SimpleNumb3r5 extends Activity implements OnClickListener{
 	// initialize all widgets
@@ -45,9 +48,6 @@ public class SimpleNumb3r5 extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_simple_numb3r5);
 		
 		
-        Intent intent = new Intent(SimpleNumb3r5.this, Evaluacion.class);
-        startActivity(intent);
-        finish();
 		
 		
 		imageNumber = (ImageView)findViewById(R.id.imagenumber);
@@ -57,7 +57,7 @@ public class SimpleNumb3r5 extends Activity implements OnClickListener{
 		//btnfirst.setEnabled(false);
 		btnfirst.setOnClickListener(this); // Add listener to the button
 
-		btnprevious = (ImageButton)findViewById(R.id.btnprevious);
+		btnprevious = (ImageButton)findViewById(R.id.btngrade);
 		//btnprevious.setEnabled(false);
 		btnprevious.setOnClickListener(this); // Add listener to the button
 		
@@ -79,14 +79,27 @@ public class SimpleNumb3r5 extends Activity implements OnClickListener{
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.simple_numb3r5, menu);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.simple_numb3r5, menu);
 		return true;
 	}
-	
+	// Process clicks on Options Menu items
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.evaluacion:
+	        Intent intent = new Intent(SimpleNumb3r5.this, Evaluacion.class);
+	        startActivity(intent);
+	        finish();
+			return true;
+		default:
+			return false;
+		}
+	}
 	// Handling the buttons click
 	// Previous is clicked
 	public void onClick(View arg0) {
-		if(arg0.getId() == R.id.btnprevious) {
+		if(arg0.getId() == R.id.btngrade) {
 			screenNumber--;
 			changeNumber(screenNumber);
 			// Call the method PlaySound()

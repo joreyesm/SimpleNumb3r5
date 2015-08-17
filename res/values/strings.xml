@@ -3,10 +3,7 @@
 
     <string name="app_name">Spelling Bee Contest</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="evaluacion">Evaluación</string>
     <string name="title_activity_info">Info</string>
-    <string name="title_activity_evaluacion">Evaluacion</string>
-    <string name="failedlabel">Failed:</string>
-    <string name="gradelabel">Grade:</string>
-    
+    <string name="title_activity_evaluacion">Evaluación</string>
 </resources>

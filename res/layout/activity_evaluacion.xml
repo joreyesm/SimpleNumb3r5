@@ -16,18 +16,10 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" >
 
-                    <TextView
+        <TextView
                 android:id="@+id/gradelbl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/gradelabel"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/failedlbl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/failedlabel"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
             
         <TableRow
@@ -40,7 +32,7 @@
                 android:id="@+id/word"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="8"
                 android:inputType="text" >
 
                 <requestFocus />
@@ -68,35 +60,31 @@
                 android:id="@+id/btnfirst"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:hint="Start evaluation again"
                 android:layout_weight="1"
                 android:src="@drawable/first" />
 
             <ImageButton
-                android:id="@+id/btnprevious"
+                android:id="@+id/btngrade"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/previous" />
+                android:text="Grade" />
             <ImageButton
                 android:id="@+id/btnsound"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:hint="Listen to the word"
                 android:src="@drawable/sound" />
 
             <ImageButton
                 android:id="@+id/btnnext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:hint="Listen to next word"
                 android:layout_weight="1"
                 android:src="@drawable/siguiente" />
-            
-            <ImageButton
-                android:id="@+id/btnlast"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/last" />
             </TableRow>
 
     </TableLayout>
