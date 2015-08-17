@@ -76,6 +76,7 @@ public class Evaluacion extends Activity implements OnClickListener {
 		failed = 0;
 		words = 0;
 		id    = 0;
+		grade = 0.00;
 		word.setText("");
 		screenNumber = 0;
 		showGrade();
